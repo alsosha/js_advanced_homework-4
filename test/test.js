@@ -1,4 +1,4 @@
-const  { healthChecker } = require('../src/app.js');
+import { healthChecker, healthSorter } from '../src/app'
 
 test('healthChecker healthy', () => {
     const userStatus = {
@@ -32,9 +32,6 @@ test('healthChecker critical', () => {
 
     expect(result).toBe('critical');
 });
-
-
-const  { healthSorter } = require('../src/app.js');
 
 test('healthSorter sorted', () => {
     const usersArray = [

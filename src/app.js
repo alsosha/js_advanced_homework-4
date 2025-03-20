@@ -1,4 +1,4 @@
-function healthChecker(statusInfo) {
+export function healthChecker(statusInfo) {
     let result = '';
     if (statusInfo.health > 50) {
         result = 'healthy';
@@ -12,12 +12,7 @@ function healthChecker(statusInfo) {
 }
 
 
-function healthSorter(statusArray) {
+export function healthSorter(statusArray) {
     const sortedStatusArray = [...statusArray];
     return sortedStatusArray.sort((a, b) => b.health - a.health);
-}
-
-module.exports = {
-    healthChecker,
-    healthSorter
 }
